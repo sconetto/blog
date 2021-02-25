@@ -1,0 +1,11 @@
+name: Joao Sconetto
+bio: |
+  <code style="font-size: 11px;">std::cout << "a nice bio here" << endl;</code><br />
+  Writing to learn, writing for fun. @sconetto
+avatar: ./avatars/joao-sconetto.jpg
+social:
+  - url: https://twitter.com/sconetto
+  - url: https://github.com/sconetto
+  - url: https://instagram.com/sconetto
+  - url: https://www.linkedin.com/in/sconetto/
+featured: true
