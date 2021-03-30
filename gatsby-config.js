@@ -4,9 +4,9 @@ module.exports = {
     title: `Sconetto's Blog`,
     name: `João Pedro Sconetto`,
     siteUrl: `https://sconetto.me/blog`,
-    description: `This is my description that will be used in the meta tags and important for search results`,
+    description: `My personal blog to write about technology (mostly).`,
     hero: {
-      heading: `this is a blog, there are some cool stuff and some rants. Enjoy it!`,
+      heading: `Just an old fashion blog. Some cool tech stuff, some rants and some tutorials.`,
       maxWidth: 652,
     },
     social: [
