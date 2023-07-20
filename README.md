@@ -50,6 +50,7 @@ Once installed or cloned locally and all packages are installed you can begin de
 
 ```sh
 # Run localhost
+export NODE_OPTIONS=--openssl-legacy-provider
 yarn dev
 
 # Build your Gatsby site
