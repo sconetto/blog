@@ -49,7 +49,7 @@ module.exports = {
         authorsPage: true,
         sources: {
           local: true,
-          // contentful: true,
+          contentful: false,
         },
       },
     },
@@ -67,8 +67,7 @@ module.exports = {
     },
     {
       resolve: `gatsby-plugin-netlify-cms`,
-      options: {
-      },
+      options: {},
     },
     {
       resolve: `gatsby-plugin-google-analytics`,

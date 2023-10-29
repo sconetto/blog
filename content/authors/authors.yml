@@ -1,0 +1,13 @@
+- name: Joao Sconetto
+  bio: |
+    <code style="font-size: 11px;">std::cout << "a nice bio here" << endl;</code><br />
+    Just a random dude. @sconetto
+  avatar: ./avatars/joao-sconetto.jpg
+  featured: true
+  slug: joao-sconetto
+  social:
+    - url: https://twitter.com/sconetto
+    - url: https://github.com/sconetto
+    - url: https://instagram.com/sconetto
+    - url: https://www.linkedin.com/in/sconetto/
+    - url: 'mailto:sconetto.joao@gmail.com'
