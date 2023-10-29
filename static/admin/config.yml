@@ -1,7 +1,6 @@
 backend: # Set up your backend
   name: github
-  owner: sconetto
-  repo: blog
+  repo: sconetto/blog
   branch: main
 
 local_backend: true # Optional if you want to use the local proxy mode
@@ -30,7 +29,7 @@ collections:
   - name: "authors"
     label: "Authors"
     folder: "content/authors/authors"
-    create: true
+    create: false
     delete: true
     format: "yml"
     identifier_field: "username"

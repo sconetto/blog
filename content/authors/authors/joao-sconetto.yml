@@ -1,14 +1,12 @@
-name: João Pedro Sconetto
-bio: >
-  <code style="font-size: 11px;">std::cout << "a nice bio here" <<
-  endl;</code><br />
-
+name: Joao Sconetto
+bio: |
+  <code style="font-size: 11px;">std::cout << "a nice bio here" << endl;</code><br />
   Writing to learn, writing for fun. @sconetto
-featured: true
 avatar: ./avatars/joao-sconetto.jpg
 social:
   - url: https://twitter.com/sconetto
   - url: https://github.com/sconetto
   - url: https://instagram.com/sconetto
   - url: https://www.linkedin.com/in/sconetto/
-  - url: mailto:sconetto.joao@gmail.com
+  - url: 'mailto:sconetto.joao@gmail.com'
+featured: true
