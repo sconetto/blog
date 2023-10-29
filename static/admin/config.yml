@@ -2,6 +2,7 @@ backend: # Set up your backend
   name: github
   owner: sconetto
   repo: blog
+  branch: main
 
 local_backend: true # Optional if you want to use the local proxy mode
 

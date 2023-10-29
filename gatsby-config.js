@@ -27,13 +27,16 @@ module.exports = {
         url: `https://www.linkedin.com/in/sconetto/`,
       },
       {
-        name: `telegram`,
-        url: `https://t.me/sconetto`,
+        name: `mailto`,
+        url: `mailto:sconetto.joao@gmail.com`,
       },
       {
-        name: `website`,
+        name: `dribbble`,
         url: `https://sconetto.me`,
       },
+      {
+        url: `https://t.me/sconetto`
+      }
     ],
   },
   plugins: [
