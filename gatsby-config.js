@@ -6,7 +6,7 @@ module.exports = {
     siteUrl: `https://sconetto.me/blog`,
     description: `My personal blog to write about technology (mostly).`,
     hero: {
-      heading: `Just an old fashion blog. Some cool tech stuff, some rants and some tutorials.`,
+      heading: `Just an old fashioned blog. Some tech text, some rants, and some personal stuff.`,
       maxWidth: 652,
     },
     social: [
@@ -25,6 +25,14 @@ module.exports = {
       {
         name: `linkedin`,
         url: `https://www.linkedin.com/in/sconetto/`,
+      },
+      {
+        name: `telegram`,
+        url: `https://t.me/sconetto`,
+      },
+      {
+        name: `website`,
+        url: `https://sconetto.me`,
       },
     ],
   },

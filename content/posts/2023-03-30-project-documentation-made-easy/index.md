@@ -1,7 +1,7 @@
 ---
 title: Project documentation made easy
 author: Joao Sconetto
-date: 2021-04-30
+date: 2023-04-30
 hero: ./images/documents-binder.jpg
 excerpt: How to quickly set up an documentation system with auto deployment.
 ---
@@ -20,7 +20,7 @@ First of all, let's create a repository to host our files. The first thing is pr
 
 For this post, I'm going to create one called `dev-to-docs`.
 
-## MkDocs
+### MkDocs
 
 Now we'll configure our MkDocs, the system that will create the pages for our documentation. For further information about MkDocs you can check their [documentation](mkdocs-docs).
 To manage our python packages I'll use [_pipenv_](pipenv-docs), but feel free to use the one you like the most!
@@ -28,23 +28,23 @@ To manage our python packages I'll use [_pipenv_](pipenv-docs), but feel free to
 Let's install and initialize our project python environment:
 
 ```shell
-$ sudo apt install pipenv # make sure to use the package manager of your distro!
-$ pipenv --three # creates the environment with Python 3
+sudo apt install pipenv # make sure to use the package manager of your distro!
+pipenv --three # creates the environment with Python 3
 ```
 
 With our environment created (_pipenv_ will create the necessary files), let's install our dependencies:
 
 ```shell
-$ pipenv install mkdocs==1.1.2
-$ pipenv install mkdocs-material==7.1.0
-$ pipenv install --dev black==20.8b1 # for some code formatting
+pipenv install mkdocs==1.5.3
+pipenv install mkdocs-material==9.4.7
+pipenv install --dev black==23.10.1 # for some code formatting
 ```
 
 We should be good to create our MkDocs project now:
 
 ```shell
-$ pipenv shell # activate our environment
-$ mkdocs new dev-to-docs
+pipenv shell # activate our environment
+mkdocs new dev-to-docs
 ```
 
 This will generate the following tree:
@@ -66,7 +66,7 @@ cd dev-to-docs # Go to the root folder of the mkdocs.yml
 mkdocs serve
 ```
 
-> MkDocs will serve the system locally, usually at http://localhost:8080 or 127.0.0.1:8080.
+> MkDocs will serve the system locally, usually at <http://localhost:8080> or 127.0.0.1:8080.
 
 ## Customizing our system
 
@@ -77,7 +77,7 @@ There is also some more settings related to the material design of MkDocs. Most 
 For this example the system is looking like:
 
 ```yaml
-site_name: Dev.to Project - Docs
+site_name: Article Documentation - Docs
 site_description: Example project for Documentation system.
 
 repo_url: https://github.com/sconetto/dev-to-docs
@@ -89,12 +89,11 @@ theme:
   name: material
   icon:
     repo: fontawesome/brands/github
-    logo: fontawesome/solid/comment-alt
+    logo: fontawesome/solid/users-line
   font:
     text: Fira Sans
     code: Fira Mono
   palette:
-    # Light mode
     - teal: "(prefers-color-scheme: light)"
       scheme: default
       primary: red
@@ -127,12 +126,13 @@ extra:
       link: https://github.com/sconetto
       name: Sconetto's GitHub
 
-copyright: Copyright &copy; 2021 - 2021 João Pedro Sconetto
+copyright: Copyright &copy; 2023 - 2023 João Pedro Sconetto
 
 markdown_extensions:
-  - toc:
-      permalink: true
-      slugify: !!python/name:pymdownx.slugs.uslugify
+  - markdown.extensions.toc:
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
   - pymdownx.arithmatex
   - pymdownx.betterem:
       smart_enable: all
@@ -224,18 +224,20 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
         with:
-          python-version: 3.x
-      - run: sudo apt install pipenv
+          python-version: '3.9'
+          cache: 'pipenv'
+      - name: Install pipenv
+        run: curl https://raw.githubusercontent.com/pypa/pipenv/master/get-pipenv.py | python
       - run: pipenv install
       - run: cd dev-to-docs && pipenv run mkdocs gh-deploy --force
 ```
 
-This will be ran on every push at *master* or *main* branch, it'll install the dependencies, generate our website and deploy it in the *gh-pages* branch.
+This will be ran on every push at _master_ or _main_ branch, it'll install the dependencies, generate our website and deploy it in the _gh-pages_ branch.
 
-You may need to manually activate GitHub pages on the settings of your repository, just go to __*Settings > Options > GitHub Pages*__. Select the source to be the branch *gh-pages* and the rest should be automatic. In case you have a custom domain you can change it here as well.
+You may need to manually activate GitHub pages on the settings of your repository, just go to _**Settings > Options > GitHub Pages**_. Select the source to be the branch _gh-pages_ and the rest should be automatic. In case you have a custom domain you can change it here as well.
 
 Your settings will look something like this:
 
@@ -268,13 +270,8 @@ Thanks for reading and we catch up in the next one 🧑🏻‍💻
 
 [example-system]: https://sconetto.me/dev-to-docs/
 [example-system-github]: https://github.com/sconetto/dev-to-docs
-[github]: https://github.com
-[github-new-repo]: https://github.com/new
-[github-join]: https://github.com/join
 [github-personal]: https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token
 [github-secrets]: https://docs.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets
 [markdown-cheatsheet]: https://devhints.io/markdown
-[mkdocs-docs]: https://www.mkdocs.org/
 [mkdocs-settings]: https://www.mkdocs.org/user-guide/configuration/
 [mkdocs-material-settings]: https://squidfunk.github.io/mkdocs-material/creating-your-site/#advanced-configuration
-[pipenv-docs]: https://github.com/pypa/pipenv

@@ -5948,9 +5948,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30001109, caniuse-lite@npm:^1.0.30001181":
-  version: 1.0.30001192
-  resolution: "caniuse-lite@npm:1.0.30001192"
-  checksum: db6ae4e86d6b513d644a3ced757533f0d19a2770ebbe1abc7c15ab859bc4bb92f88baf09a503ce1c8e426ebca12a1b1b3accf209167f8ed4e2d0958f9d0683d6
+  version: 1.0.30001557
+  resolution: "caniuse-lite@npm:1.0.30001557"
+  checksum: 01db1d5fb207ceee1daeb6968dba66f05143c428705a5a11979879250e3c91dfc805bc9275d5cdefe7d182cedbb88ba0e859bcd9159ada046847ac05dd867318
   languageName: node
   linkType: hard
 
@@ -23372,6 +23372,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"sconetto-blog@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "sconetto-blog@workspace:."
+  dependencies:
+    "@narative/gatsby-theme-novela": ^0.18.7
+    gatsby: ^2.32.13
+    gatsby-plugin-google-analytics: ^2.11.0
+    gatsby-plugin-manifest: ^2.12.1
+    gatsby-plugin-netlify-cms: ^4.10.1
+    netlify-cms-app: ^2.15.72
+    netlify-cms-proxy-server: ^1.3.24
+    react: ^16.14.0
+    react-dom: ^16.14.0
+  languageName: unknown
+  linkType: soft
+
 "screenfull@npm:^5.0.0":
   version: 5.1.0
   resolution: "screenfull@npm:5.1.0"
@@ -23850,22 +23866,6 @@ __metadata:
   checksum: aba6438f46d2bfcef94cf112c835ab395172c75f67453fe05c340c770d3c402363018ae1ab4172a1026a90c47eaccf3af7b6ff6fa749a680c2929bd7fa2b37a4
   languageName: node
   linkType: hard
-
-"site@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "site@workspace:."
-  dependencies:
-    "@narative/gatsby-theme-novela": ^0.18.7
-    gatsby: ^2.32.13
-    gatsby-plugin-google-analytics: ^2.11.0
-    gatsby-plugin-manifest: ^2.12.1
-    gatsby-plugin-netlify-cms: ^4.10.1
-    netlify-cms-app: ^2.15.72
-    netlify-cms-proxy-server: ^1.3.24
-    react: ^16.14.0
-    react-dom: ^16.14.0
-  languageName: unknown
-  linkType: soft
 
 "slash@npm:^1.0.0":
   version: 1.0.0

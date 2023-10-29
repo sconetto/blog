@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "site",
+  "name": "sconetto-blog",
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
